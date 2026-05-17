@@ -551,6 +551,17 @@ section {
     margin-top: 1.5rem;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.logo-img {
+    height: 35px;
+    width: auto;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
     .menu-toggle {
