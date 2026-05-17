@@ -40,12 +40,14 @@ body {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #6b21a5, #3b82f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    display: block;
 }
 
 .nav-links {
@@ -231,15 +233,15 @@ section {
     border-radius: 2px;
 }
 
-/* About */
+/* About - Texto ancho y tarjetas abajo */
 .about-content {
-    display: grid;
-    grid-template-columns: 1fr auto;
+    display: flex;
+    flex-direction: column;
     gap: 3rem;
-    align-items: start;
 }
 
 .about-text {
+    width: 100%;
     font-size: 1rem;
     color: #4a4a6a;
 }
@@ -252,6 +254,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+    width: 100%;
 }
 
 .highlight-card {
@@ -551,18 +554,7 @@ section {
     margin-top: 1.5rem;
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.logo-img {
-    height: 35px;
-    width: auto;
-}
-
-
-/* Responsive */
+/* Responsive - Móvil */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -585,16 +577,16 @@ section {
         display: flex;
     }
     
+    .logo-img {
+        height: 35px;
+    }
+    
     .hero h1 {
         font-size: 2rem;
     }
     
     .hero-subtitle {
         font-size: 1rem;
-    }
-    
-    .about-content {
-        grid-template-columns: 1fr;
     }
     
     .about-highlights {
